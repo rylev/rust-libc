@@ -147,7 +147,7 @@ cfg_if! {
 
         mod sgx;
         pub use sgx::*;
-    } else if #[cfg(any(target_env = "wasi", target_os = "wasi"))] {
+    } else if #[cfg(any(target_env = "wasi", target_os = "wasi", target_os = "wasi-preview2"))] {
         mod fixed_width_ints;
         pub use fixed_width_ints::*;
 
